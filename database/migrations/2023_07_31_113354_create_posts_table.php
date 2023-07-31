@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text('title');
+            $table->text('content');
+            $table->boolean('published')->default(false);
         });
     }
 
