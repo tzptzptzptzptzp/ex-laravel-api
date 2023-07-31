@@ -14,7 +14,13 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        return Post::create($request->all());
+        $validatedData = $request->validate([
+            'title' => 'required|string',
+            'content' => 'required|string',
+            'published' => 'boolean',
+        ]);
+
+        return Post::create($validatedData);
     }
 
     public function show($id)
@@ -25,7 +31,14 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::findOrFail($id);
-        $post->update($request->all());
+
+        $validatedData = $request->validate([
+            'title' => 'string',
+            'content' => 'string',
+            'published' => 'boolean',
+        ]);
+
+        $post->update($validatedData);
         return $post;
     }
 
