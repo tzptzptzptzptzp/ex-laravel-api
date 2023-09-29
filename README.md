@@ -16,3 +16,24 @@ php artisan を使用しています
 php artisan
 php artisan serve // サーバー起動
 ```
+
+---
+
+## Introduction
+
+This is a simple API built using Laravel.  
+It supports CRUD operations for different endpoints.
+
+## Technologies Used
+
+-   [Laravel](https://laravel.com/)
+-   [PHP](https://www.php.net/)
+
+## Development Steps
+
+We use `php artisan` for development.
+
+```bash
+php artisan
+php artisan serve // Start the server
+```
